@@ -1,0 +1,21 @@
+#  Template maven-build
+
+#  This template allows you to test and build your Java project with Maven.
+#  The workflow allows running tests, code checkstyle and security scans on the default branch.
+
+# Prerequisites: pom.xml and appropriate project structure should exist in the repository.
+image:
+  name: 257422981421.dkr.ecr.sa-east-1.amazonaws.com/atlassian:1.2
+  aws:
+    access-key: $AWS_ACCESS_KEY_ID
+    secret-key: $AWS_SECRET_ACCESS_KEY
+pipelines:
+  custom:
+    deploy:
+      - step:
+          name: Deploing
+          caches:
+            - maven
+          script:
+            - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain nexuscloud --domain-owner 257422981421 --region us-east-1 --query authorizationToken --output text`
+            - mvn clean deploy --settings ./settings.xml

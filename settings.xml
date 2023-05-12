@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  
+  <pluginGroups>
+   
+  </pluginGroups>
+
+  
+  <proxies>
+   
+  </proxies>
+
+  
+  <servers>
+    <server>
+      <id>nexuscloud-nexuscloud</id>
+      <username>aws</username>
+      <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+    </server>
+  </servers>
+
+  
+  <mirrors>
+    
+  </mirrors>
+  <profiles>
+    <profile>
+      <id>nexuscloud-nexuscloud</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>nexuscloud-nexuscloud</id>
+          <url>https://nexuscloud-257422981421.d.codeartifact.us-east-1.amazonaws.com/maven/nexuscloud/</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+
+</settings>
