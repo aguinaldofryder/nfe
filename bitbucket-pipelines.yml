@@ -5,7 +5,7 @@
 
 # Prerequisites: pom.xml and appropriate project structure should exist in the repository.
 image:
-  name: 257422981421.dkr.ecr.sa-east-1.amazonaws.com/atlassian:1.2
+  name: 257422981421.dkr.ecr.sa-east-1.amazonaws.com/atlassian:maven-3.8.1-jdk-11
   aws:
     access-key: $AWS_ACCESS_KEY_ID
     secret-key: $AWS_SECRET_ACCESS_KEY
