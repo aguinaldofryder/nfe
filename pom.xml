@@ -133,6 +133,15 @@
         </dependency>
     </dependencies>
 
+
+	<distributionManagement>
+		<repository>
+			<id>nexuscloud-nexuscloud</id>
+			<name>nexuscloud-nexuscloud</name>
+			<url>https://nexuscloud-257422981421.d.codeartifact.us-east-1.amazonaws.com/maven/nexuscloud/</url>
+		</repository>
+	</distributionManagement>
+    
     <build>
         <resources>
             <resource>
