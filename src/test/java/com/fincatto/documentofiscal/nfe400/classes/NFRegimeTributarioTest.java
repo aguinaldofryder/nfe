@@ -21,7 +21,7 @@ public class NFRegimeTributarioTest {
 
     @Test
     public void deveObterNuloCasoNaoExistaCodigo() {
-        Assert.assertNull(NFRegimeTributario.valueOfCodigo("4"));
+        Assert.assertNull(NFRegimeTributario.valueOfCodigo("5"));
     }
 
     @Test
